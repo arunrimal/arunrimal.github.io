@@ -282,7 +282,7 @@ body {
 
 .profile-placeholder {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 3/4;
     border-radius: 20px;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     display: flex;
