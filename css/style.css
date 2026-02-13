@@ -7,11 +7,11 @@
     --accent: #f59e0b;
     --bg-primary: #ffffff;
     --bg-secondary: #f8fafc;
-    --bg-dark: #0f172a;
-    --text-primary: #0f172a;
+    --bg-dark: #0f1e41;
+    --text-primary: #030c23;
     --text-secondary: #64748b;
-    --text-light: #94a3b8;
-    --border: #e2e8f0;
+    --text-light: #233d60;
+    --border: #fdd823;
     
     /* Typography */
     --font-primary: 'Segoe UI', system-ui, -apple-system, sans-serif;
