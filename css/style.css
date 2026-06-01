@@ -576,6 +576,138 @@ body {
     transform: translateX(5px);
 }
 
+/* ==================== Project Thumbnail & Gallery Modal ==================== */
+.project-card--has-thumb {
+    padding-top: 0;
+}
+
+.project-thumbnail {
+    margin: 0 0 1.5rem 0;
+    height: 180px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-thumbnail:hover img {
+    transform: scale(1.05);
+}
+
+.thumbnail-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(4, 22, 48, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-thumbnail:hover .thumbnail-overlay {
+    opacity: 1;
+}
+
+.gallery-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-modal.active {
+    display: flex;
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    cursor: pointer;
+}
+
+.gallery-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.gallery-close {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+    line-height: 1;
+}
+
+.gallery-close:hover {
+    opacity: 1;
+}
+
+.gallery-img {
+    max-width: 88vw;
+    max-height: 78vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.gallery-btn {
+    background: var(--primary);
+    border: none;
+    color: var(--secondary);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.gallery-btn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+.gallery-counter {
+    color: white;
+    font-size: 0.95rem;
+    min-width: 48px;
+    text-align: center;
+}
 
 /* ==================== Education Section ==================== */
 .education {

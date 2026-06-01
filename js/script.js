@@ -167,6 +167,58 @@ if ('loading' in HTMLImageElement.prototype) {
 }
 */
 
+// ==================== Project Image Gallery ====================
+const galleries = {
+    aws: [
+        'assets/doc-img/aws/CloudProject_DataPipeline_AWS_01.jpg',
+        'assets/doc-img/aws/CloudProject_DataPipeline_AWS_02.jpg'
+    ],
+    bwa: [
+        'assets/doc-img/bwa/Airflow_ss_01.png',
+        'assets/doc-img/bwa/Airflow_ss_02.png',
+        'assets/doc-img/bwa/BWA-Poster.JPG'
+    ]
+};
+
+let currentGallery = [];
+let currentIndex = 0;
+
+function openGallery(name) {
+    currentGallery = galleries[name];
+    currentIndex = 0;
+    updateGalleryImage();
+    document.getElementById('galleryModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeGallery() {
+    document.getElementById('galleryModal').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function updateGalleryImage() {
+    document.getElementById('galleryImg').src = currentGallery[currentIndex];
+    document.getElementById('galleryCounter').textContent = `${currentIndex + 1} / ${currentGallery.length}`;
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    updateGalleryImage();
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    updateGalleryImage();
+}
+
+document.addEventListener('keydown', (e) => {
+    const modal = document.getElementById('galleryModal');
+    if (!modal || !modal.classList.contains('active')) return;
+    if (e.key === 'Escape') closeGallery();
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'ArrowRight') nextImage();
+});
+
 // ==================== Console Easter Egg ====================
 console.log('%c👋 Hello there!', 'font-size: 20px; font-weight: bold; color: #2563eb;');
 console.log('%cLooking for a Data Scientist or ML Engineer?', 'font-size: 14px; color: #64748b;');
