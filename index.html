@@ -250,16 +250,10 @@
                     <a href="https://credit-risk-app-01.streamlit.app/" target="_blank" class="project-link">View Live Demo →</a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
-                            <polyline points="7.5 19.79 7.5 14.6 3 12"/>
-                            <polyline points="21 12 16.5 14.6 16.5 19.79"/>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                            <line x1="12" y1="22.08" x2="12" y2="12"/>
-                        </svg>
+                <div class="project-card project-card--has-thumb">
+                    <div class="project-thumbnail" onclick="openGallery('aws')">
+                        <img src="assets/doc-img/aws/CloudProject_DataPipeline_AWS_01.jpg" alt="AWS ETL Pipeline screenshot">
+                        <div class="thumbnail-overlay">📷 View 2 screenshots</div>
                     </div>
                     <h3>AWS ETL Pipeline</h3>
                     <p>Developed automated AWS ETL pipeline for transferring and validating data from CSV files and APIs.</p>
@@ -292,16 +286,10 @@
                     <a href="https://pdf-qna-rag-frontend.vercel.app/" target="_blank" class="project-link">View Live Demo →</a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
-                            <polyline points="7.5 19.79 7.5 14.6 3 12"/>
-                            <polyline points="21 12 16.5 14.6 16.5 19.79"/>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                            <line x1="12" y1="22.08" x2="12" y2="12"/>
-                        </svg>
+                <div class="project-card project-card--has-thumb">
+                    <div class="project-thumbnail" onclick="openGallery('bwa')">
+                        <img src="assets/doc-img/bwa/Airflow_ss_01.png" alt="BWA Pipeline screenshot">
+                        <div class="thumbnail-overlay">📷 View 3 screenshots</div>
                     </div>
                     <h3>Kansas BWA Data & NLP Pipeline</h3>
                     <p>Built a scalable Python data engineering pipeline orchestrated with Apache Airflow, integrating web scraping, custom spaCy NER, Gemini LLM classification, fuzzy string matching, and geospatial analysis to extract, classify, and map boil water advisory causes from KDHE public health data across Kansas.</p>
@@ -421,6 +409,20 @@
             </div>
         </div>
     </footer>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-overlay" onclick="closeGallery()"></div>
+        <div class="gallery-content">
+            <button class="gallery-close" onclick="closeGallery()" aria-label="Close">&#x2715;</button>
+            <img class="gallery-img" id="galleryImg" src="" alt="Project screenshot">
+            <div class="gallery-nav">
+                <button class="gallery-btn" onclick="prevImage()" aria-label="Previous">&#8249;</button>
+                <span class="gallery-counter" id="galleryCounter"></span>
+                <button class="gallery-btn" onclick="nextImage()" aria-label="Next">&#8250;</button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
