@@ -187,7 +187,9 @@ const galleries = {
         'assets/doc-img/mlops/6_Model_registry_03.png',
         'assets/doc-img/mlops/7_Model_overview.png',
         'assets/doc-img/mlops/8_Tags_&_Schema.png',
-        'assets/doc-img/mlops/9_Model_artifacts.png'
+        'assets/doc-img/mlops/9_Model_artifacts.png',
+        'assets/doc-img/mlops/webhook_slack_01.png',
+        'assets/doc-img/mlops/webhook_slack_02.png'
     ]
 };
 
