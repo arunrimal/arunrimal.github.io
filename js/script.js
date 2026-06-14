@@ -177,6 +177,17 @@ const galleries = {
         'assets/doc-img/bwa/Airflow_ss_01.png',
         'assets/doc-img/bwa/Airflow_ss_02.png',
         'assets/doc-img/bwa/BWA-Poster.JPG'
+    ],
+    mlops: [
+        'assets/doc-img/mlops/1_homepage.png',
+        'assets/doc-img/mlops/2_Experiments.png',
+        'assets/doc-img/mlops/3_Runs.png',
+        'assets/doc-img/mlops/4_Model_registry_01.png',
+        'assets/doc-img/mlops/5_Model_registry_02.png',
+        'assets/doc-img/mlops/6_Model_registry_03.png',
+        'assets/doc-img/mlops/7_Model_overview.png',
+        'assets/doc-img/mlops/8_Tags_&_Schema.png',
+        'assets/doc-img/mlops/9_Model_artifacts.png'
     ]
 };
 
